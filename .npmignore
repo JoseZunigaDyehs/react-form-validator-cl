@@ -1,0 +1,10 @@
+#DEPENDENCIES
+/node_modules
+
+#PUBLIC
+/puclic
+/src
+
+.npmignore
+.babelrc
+rollup.config.js
