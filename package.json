@@ -17,7 +17,7 @@
   "bugs": {
     "url": "https://github.com/JoseZunigaDyehs/react-form-validator-cl/issues"
   },
-  "homepage": ".",
+  "homepage": "./react-form-validator-cl",
   "scripts": {
     "start": "react-scripts start",
     "build": "rm -rf dist && NODE_ENV=production babel src/lib --out-dir dist --copy-files --ignore __tests__,spec.js,test.js,__snapshots__",
