@@ -2,12 +2,14 @@
   "name": "react-form-validator-cl",
   "version": "0.1.0",
   "description": "ReactJS Library, with which you can build forms with automatics validates.",
-  "dependencies": {
-  },
+  "dependencies": {},
   "main": "dist/index.js",
   "module": "dist/index.js",
   "license": "MIT",
-  "files": [ "dist", "README.md" ],
+  "files": [
+    "dist",
+    "README.md"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/JoseZunigaDyehs/react-form-validator-cl.git"
@@ -15,13 +17,13 @@
   "bugs": {
     "url": "https://github.com/JoseZunigaDyehs/react-form-validator-cl/issues"
   },
-  "homepage": "https://github.com/JoseZunigaDyehs/react-form-validator-cl#readme",
+  "homepage": "https://josezunigadyehs.github.io/",
   "scripts": {
     "start": "react-scripts start",
     "build": "rm -rf dist && NODE_ENV=production babel src/lib --out-dir dist --copy-files --ignore __tests__,spec.js,test.js,__snapshots__",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "publish": ""
+    "build-example": "react-scripts build",
+    "deploy": "gh-pages -d build"
   },
   "keywords": [
     "react",
@@ -41,9 +43,10 @@
     "not op_mini all"
   ],
   "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "gh-pages": "^2.0.1",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
-    "react-scripts": "2.1.3",
-    "@babel/cli": "^7.2.3"
+    "react-scripts": "2.1.3"
   }
 }

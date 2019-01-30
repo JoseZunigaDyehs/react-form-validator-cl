@@ -4,6 +4,7 @@
 #PUBLIC
 /puclic
 /src
+/build
 
 .npmignore
 .babelrc

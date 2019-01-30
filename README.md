@@ -1,8 +1,8 @@
 # react-form-validator-cl
-ReactJS Library, with which you can build forms with automatics validates. 
-Include Chilean ID validate.
+ReactJS Library to build forms and custom validations. 
+Include Chilean ID validation.
 
-Librería ReactJS, con la que podrás construir formularios con validaciones automáticas.
+Librería ReactJS para contruir fomularios y validaciones personalizadas.
 Incluye validación de RUT
 ## Installation
 Run the following command:
