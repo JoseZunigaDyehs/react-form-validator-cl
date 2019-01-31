@@ -2,21 +2,21 @@
 Un simple componente React que permite crear formularios con validaciones.
 
 ## Requerimiento
-Usarlo en un desarrolo en React
+Usarlo en un desarrollo en React
 
 ## Demo
 [Demo Form Validator CL](https://josezunigadyehs.github.io/react-form-validator-cl/)
 
 ## Instalación
 Instálalo a traves de npm:
-`npm install react-form-validator-cl`
+`$ npm install react-form-validator-cl`
 
 ## Ejemplo
 
 ```
 import React from "react";
 import ReactDOM from "react-dom";
-import Form from "./lib/components/form/form";
+import Form from "react-form-validator-cl";
 const fields = [
   {
     legend: "Nombre*",
