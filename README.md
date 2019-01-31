@@ -181,7 +181,7 @@ El componente Form, permite los siguientes parámetros:
 ## Tipos de Campos
 Existen distintos tipos de validaciones según el campo <br/>
 
-#### Text:
+#### Text
 
 ```
 {
@@ -198,7 +198,7 @@ Existen distintos tipos de validaciones según el campo <br/>
 }
 ```
 
-#### Rut:
+#### Rut
 
 ```
 {
