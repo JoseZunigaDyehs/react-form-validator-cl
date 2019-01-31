@@ -10,13 +10,13 @@ El componente Form, permite los siguientes parámetros:
 
 ### Form
 
-fontColor: color para fuente
-primaryColor: color para cabezera y botón
-distinctFieldsMsg: Mensaje para campos obligatorios
-sendFunction: Función que se ejecuta al enviar el formulario.
-errorMsg: Mensaje de error, se suele usar para errores con el servidor
-error: Si el formulario tiene o no error
-fields: Array con objetos de campos del formulario
+**fontColor:** color para fuente <br/>
+**primaryColor:** color para cabezera y botón <br/>
+**distinctFieldsMsg:** Mensaje para campos obligatorios <br/>
+**sendFunction:** Función que se ejecuta al enviar el formulario. <br/>
+**errorMsg:** Mensaje de error, se suele usar para errores con el servidor <br/>
+**error:** Si el formulario tiene o no error <br/>
+**fields:** Array con objetos de campos del formulario <br/>
 
 ```
 <Form
@@ -33,12 +33,12 @@ fields: Array con objetos de campos del formulario
 
 ### Field
 
-legend: Título del campo
-type: Tipo de campo
-name: Nombre del campo
-placeholder: Placeholder del campo
-autocomplete: autocomplete personalizado por campo
-validate: Objeto con parámetros de validacion
+**legend:** Título del campo
+**type:** Tipo de campo
+**name:** Nombre del campo
+**placeholder:** Placeholder del campo
+**autocomplete:** autocomplete personalizado por campo
+**validate:** Objeto con parámetros de validacion
 
 ### Validate
 
