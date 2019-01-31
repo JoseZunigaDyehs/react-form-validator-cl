@@ -1,6 +1,6 @@
 {
   "name": "react-form-validator-cl",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "ReactJS Library, with which you can build forms with automatics validates.",
   "dependencies": {},
   "main": "dist/index.js",
