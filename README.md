@@ -144,7 +144,7 @@ El componente Form, permite los siguientes parámetros:
     errorMsg={"ERRORORRO"}
     error={false}
   />
-````
+```
 
 ### Field
 
@@ -167,7 +167,7 @@ error: Mensaje de error para el campo<br/>
 Existen distintos de validaciones según el campo <br/>
 Estas son los disto¡intos tipos de campos permito¡idos<br/>
 
-#### Text: 
+#### Text:
 
 ```
 {
@@ -197,7 +197,7 @@ Estas son los disto¡intos tipos de campos permito¡idos<br/>
         types: ["required", "rut"],
         error: "Debes ingresar un rut válido"
 }
-````
+```
 
 #### Teléfono
 
