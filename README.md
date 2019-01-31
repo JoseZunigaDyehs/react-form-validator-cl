@@ -4,7 +4,7 @@ Un simple componente React que permite crear formularios con validaciones.
 ## Requerimiento
 Usarlo en un desarrolo en React
 
-##Demo
+## Demo
 [Demo Form Validator CL](https://josezunigadyehs.github.io/react-form-validator-cl/)
 
 ## Instalación
