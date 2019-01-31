@@ -155,17 +155,31 @@ El componente Form, permite los siguientes parámetros:
 **autocomplete:** autocomplete personalizado por campo <br/>
 **validate:** Objeto con parámetros de validacion <br/>
 
+```
+  {
+    legend: "Comentario",
+    type: "textarea",
+    name: "comentario",
+    placeholder: "Escriba aquí su comentario",
+    autocomplete: "off",
+    rows: 5,
+    validate: {
+      types: ["text"],
+      rules: { min: 3, max: 150 },
+      error: "Debes completar el nombre (mínimo 3, máximo 150)"
+    }
+  }
+```
+
+
 ### Validate
 
-types: Array con parámetros para saber si es requerido y el tipo de validación que se necesita <br/>
-rules: Reglas de la validación <br/>
-error: Mensaje de error para el campo<br/>
+**types:** Array con parámetros para saber si es requerido y el tipo de validación que se necesita <br/>
+**rules:** Reglas de la validación <br/>
+**error:** Mensaje de error para el campo<br/>
 
-- - - -
-
-### Tipos de Campos
-Existen distintos de validaciones según el campo <br/>
-Estas son los disto¡intos tipos de campos permito¡idos<br/>
+## Tipos de Campos
+Existen distintos tipos de validaciones según el campo <br/>
 
 #### Text:
 
