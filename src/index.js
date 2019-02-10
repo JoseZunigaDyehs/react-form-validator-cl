@@ -98,21 +98,30 @@ const sendFunc = dataForm => {
   return true;
 };
 
-const style = {
-  maxHeight: "34rem"
+const styleParent = {
+  width: '100%',
+  display: 'flex',
+  justifyContent: 'center'
+};
+
+const styleContainerForm = {
+  width: "340px",
+  margin: '40px 0',
 };
 
 ReactDOM.render(
-  <div style={style}>
-    <Form
-      colors={colorFormCss}
-      distinctFieldsMsg={"Campos obligatorios (*)"}
-      autoComplete={"off"}
-      fields={fields}
-      sendFunc={sendFunc}
-      errorMsg={"ERRORORRO"}
-      error={false}
-    />
+  <div style={styleParent}>
+    <div style={styleContainerForm}>
+      <Form
+        colors={colorFormCss}
+        distinctFieldsMsg={"Campos obligatorios (*)"}
+        autoComplete={"off"}
+        fields={fields}
+        sendFunc={sendFunc}
+        errorMsg={"ERRORORRO"}
+        error={false}
+      />
+    </div>
   </div>,
   document.getElementById("root")
 );

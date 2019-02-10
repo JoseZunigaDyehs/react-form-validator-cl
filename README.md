@@ -114,7 +114,7 @@ const colorFormCss = [
 ];
 
 const style = {
-  maxHeight: '340px'
+  maxWidth: '340px'
 };
 
 const sendFunc = dataForm => {
