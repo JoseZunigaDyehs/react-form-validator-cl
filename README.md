@@ -1,13 +1,17 @@
 # react-form-validator-cl
+
 Un simple componente React que permite crear formularios con validaciones.
 
 ## Requerimiento
+
 Usarlo en un desarrollo en React
 
 ## Demo
+
 [Demo Form Validator CL](https://josezunigadyehs.github.io/react-form-validator-cl/)
 
 ## Instalación
+
 Instálalo a traves de npm:
 `$ npm install react-form-validator-cl`
 
@@ -24,7 +28,7 @@ const fields = [
     name: "nombre",
     placeholder: "Ej. Juan",
     autocomplete: "off",
-    validate: { 
+    validate: {
       types: ["required", "text"],
       rules: { min: 3, max: 10 },
       error: "Debes completar el nombre (mínimo 3, máximo 10)"
@@ -101,37 +105,57 @@ const fields = [
     }
   }
 ];
+
+const colorFormCss = [
+  { fontColor: "#9a9a9f" },
+  { primaryColor: "#2979ff" },
+  { errorColor: "#dd2c00" },
+  { backgroundColor: "#fff" }
+];
+
+const style = {
+  maxHeight: '340px'
+};
+
 const sendFunc = dataForm => {
   console.log(dataForm);
   return true;
 };
 
 ReactDOM.render(
-  <Form
-    primaryColor="red"
-    distinctFieldsMsg={"Campos obligatorios (*)"}
-    autoComplete={"off"}
-    fields={fields}
-    sendFunc={sendFunc}
-    errorMsg={"ERRORORRO"}
-    error={false}
-  />,
+  <div style={style}>
+    <Form
+      colors={colorFormCss}
+      distinctFieldsMsg={"Campos obligatorios (*)"}
+      autoComplete={"off"}
+      fields={fields}
+      sendFunc={sendFunc}
+      errorMsg={"No se ha podido enviar el formulario"}
+      error={false}
+    />
+  </div>,
   document.getElementById("root")
 );
 ```
 
 ## Documentación
+
 El componente Form, permite los siguientes parámetros:
 
 ### Form
 
 **fontColor:** color para fuente <br/>
 **primaryColor:** color para cabezera y botón <br/>
+**errorColor:** color para error <br/>
+**backgroundColor:** color de fondo <br/>
 **distinctFieldsMsg:** Mensaje para campos obligatorios <br/>
 **sendFunction:** Función que se ejecuta al enviar el formulario. <br/>
 **errorMsg:** Mensaje de error, se suele usar para errores con el servidor <br/>
 **error:** Si el formulario tiene o no error <br/>
 **fields:** Array con objetos de campos del formulario <br/>
+<br/>
+
+El componente form tiene un ancho de 100%, el cual se adapta al contenedor padre en el que se agregue
 
 ```
 <Form
@@ -171,7 +195,6 @@ El componente Form, permite los siguientes parámetros:
   }
 ```
 
-
 ### Validate
 
 **types:** Array con parámetros para saber si es requerido y el tipo de validación que se necesita <br/>
@@ -179,6 +202,7 @@ El componente Form, permite los siguientes parámetros:
 **error:** Mensaje de error para el campo<br/>
 
 ## Tipos de Campos
+
 Existen distintos tipos de validaciones según el campo <br/>
 
 #### Text
@@ -190,7 +214,7 @@ Existen distintos tipos de validaciones según el campo <br/>
     name: "nombre",
     placeholder: "Ej. Juan",
     autocomplete: "off",
-    validate: { 
+    validate: {
         types: ["required", "text"],
         rules: { min: 3, max: 10 },
         error: "Debes completar el nombre (mínimo 3, máximo 10)"
@@ -261,6 +285,8 @@ Existen distintos tipos de validaciones según el campo <br/>
 
 #### Select
 
+Siempre debe tener una opción de Selección con valor "-1"
+
 ```
   {
     legend: "Select prueba",
@@ -297,5 +323,4 @@ Existen distintos tipos de validaciones según el campo <br/>
   }
 ```
 
-
-
+##

@@ -1,404 +1,392 @@
 @import url(https://use.fontawesome.com/releases/v5.1.0/css/all.css);
+
 @font-face {
-    font-family: 'Geomanist';
-    src: url('./fonts/geomanist-light.eot');
-    src: url('./fonts/geomanist-light.eot?#iefix') format('embedded-opentype'), url('./fonts/geomanist-light.woff2') format('woff2'), url('./fonts/geomanist-light.woff') format('woff'), url('./fonts/geomanist-light.ttf') format('truetype'), url('./fonts/geomanist-light.svg#geomanistlight') format('svg');
-    font-weight: 300;
-    font-style: normal;
+  font-family: "Geomanist";
+  src: url("./fonts/geomanist-light.eot");
+  src: url("./fonts/geomanist-light.eot?#iefix") format("embedded-opentype"),
+    url("./fonts/geomanist-light.woff2") format("woff2"),
+    url("./fonts/geomanist-light.woff") format("woff"),
+    url("./fonts/geomanist-light.ttf") format("truetype"),
+    url("./fonts/geomanist-light.svg#geomanistlight") format("svg");
+  font-weight: 300;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Geomanist';
-    src: url('./fonts/geomanist-book.eot');
-    src: url('./fonts/geomanist-book.eot?#iefix') format('embedded-opentype'), url('./fonts/geomanist-book.woff2') format('woff2'), url('./fonts/geomanist-book.woff') format('woff'), url('./fonts/geomanist-book.ttf') format('truetype'), url('./fonts/geomanist-book.svg#geomanistbook') format('svg');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "Geomanist";
+  src: url("./fonts/geomanist-book.eot");
+  src: url("./fonts/geomanist-book.eot?#iefix") format("embedded-opentype"),
+    url("./fonts/geomanist-book.woff2") format("woff2"),
+    url("./fonts/geomanist-book.woff") format("woff"),
+    url("./fonts/geomanist-book.ttf") format("truetype"),
+    url("./fonts/geomanist-book.svg#geomanistbook") format("svg");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'Geomanist';
-    src: url('./fonts/geomanist-medium.eot');
-    src: url('./fonts/geomanist-medium.eot?#iefix') format('embedded-opentype'), url('./fonts/geomanist-medium.woff2') format('woff2'), url('./fonts/geomanist-medium.woff') format('woff'), url('./fonts/geomanist-medium.ttf') format('truetype'), url('./fonts/geomanist-medium.svg#geomanistmedium') format('svg');
-    font-weight: 600;
-    font-style: normal;
+  font-family: "Geomanist";
+  src: url("./fonts/geomanist-medium.eot");
+  src: url("./fonts/geomanist-medium.eot?#iefix") format("embedded-opentype"),
+    url("./fonts/geomanist-medium.woff2") format("woff2"),
+    url("./fonts/geomanist-medium.woff") format("woff"),
+    url("./fonts/geomanist-medium.ttf") format("truetype"),
+    url("./fonts/geomanist-medium.svg#geomanistmedium") format("svg");
+  font-weight: 600;
+  font-style: normal;
 }
+
 :root {
-    --first: #2979ff;
-    --launcher: #2979ff;
-    --bg-back: #fff;
-    --border-color: #E2E2E2;
-    --titles: #333;
-    --gray: #666;
-    --gray-light: #ddd;
-    --gray-dark: #999;
-    --error: #dd2c00;
-    --bubble-bg: #f5f5f5;
-    --bubble-bg-message: #0078c7;
-    --bubble-bg-message-text: #9a9a9f;
-    --bubble-bg-message-text-send: #FFFFFF;
-    --white-gray: #f8f8f8;
-    --success: #86c546;
-    /* // --img-header: "../images/nodos.svg"; */
-    --gradient-medium: #0052dc;
-    --gradient-dark: #2061d1;
+  --fontColorFormCL: #9a9a9f;
+  --primaryColorFormCL: #2979ff;
+  --errorColorFormCL: #dd2c00;
+  --grayFormCL: #666;
+  --grayLightFormCL: #ddd;
+  --grayDarkFormCL: #999;
+  --borderColorFormCL: #e2e2e2;
+  --gradientMediumFormCL: #e2e2e2;
+  --titlesFormCL: #333;
+  --whiteGrayFormCL: #f8f8f8;
+  --backgroundColorFormCL: #fff;
+  --whiteLightFormCL: #ccc;
+  --font: "Geomanist";
 }
 
-* {
+html {
+  font-family: var(--font);
+  font-weight: 300;
+  font-size: 62.5%;
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.main_Hide__1Ch20 {
+  display: none;
+}
+
+.main_Disabled__18e7Z {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.container-form * {
   margin: 0;
   box-sizing: border-box;
 }
 
-@keyframes spinner {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-}
-html {
-  font: 300 62.5% "Geomanist";
+.container-form button,
+.container-form input,
+.container-form select,
+.container-form textarea {
+  font-family: var(--font);
 }
 
-body{
-    background: #f9f9f9;
+.container-form fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
 }
 
-.main_Hide__1Ch20 {
-    display: none
+.container-form input,
+.container-form select,
+.container-form textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  display: block;
+  width: 100%;
+  margin-bottom: 1rem;
+  background-color: initial;
+  border: 0;
+  padding: 1rem;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  height: 4.5rem;
+  background: var(--backgroundColorFormCL);
+  font-size: 1.4rem;
 }
 
-.main_Disabled__18e7Z {
-    opacity: .3;
-    pointer-events: none
+.container-form input:hover,
+.container-form select:hover,
+.container-form textarea:hover {
+  border-color: var(--titlesFormCL);
 }
 
-button,
-input,
-select,
-textarea {
-    font-family: Geomanist
+.container-form input:focus,
+.container-form select:focus,
+.container-form textarea:focus {
+  outline: 0 none;
 }
 
-fieldset {
-    border: 0;
-    margin: 0;
-    padding: 0
-}
-
-input,
-select,
-textarea {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    -ms-appearance: none;
-    appearance: none;
-    display: block;
-    width: 100%;
-    margin-bottom: 1rem;
-    background-color: initial;
-    border: 0;
-    padding: 1rem;
-    -webkit-transition: all .3s ease;
-    transition: all .3s ease;
-    height: 4.5rem;
-    background-color: #fff;
-    font-size: 1.4rem
-}
-
-input:hover,
-select:hover,
-textarea:hover {
-    border-color: #333;
-    border-color: var(--titles)
-}
-
-input:focus,
-select:focus,
-textarea:focus {
-    outline: 0 none
-}
-
-input:-webkit-autofill,
-input:-webkit-autofill:active,
-input:-webkit-autofill:focus,
-input:-webkit-autofill:hover,
-select:-webkit-autofill,
-select:-webkit-autofill:active,
-select:-webkit-autofill:focus,
-select:-webkit-autofill:hover,
-textarea:-webkit-autofill,
-textarea:-webkit-autofill:active,
-textarea:-webkit-autofill:focus,
-textarea:-webkit-autofill:hover {
-    -webkit-text-fill-color: #666!important;
-    -webkit-transition: background-color 5000s ease-in-out 0s;
-    transition: background-color 5000s ease-in-out 0s
+.container-form input:-webkit-autofill,
+.container-form input:-webkit-autofill:active,
+.container-form input:-webkit-autofill:focus,
+.container-form input:-webkit-autofill:hover,
+.container-form select:-webkit-autofill,
+.container-form select:-webkit-autofill:active,
+.container-form select:-webkit-autofill:focus,
+.container-form select:-webkit-autofill:hover,
+.container-form textarea:-webkit-autofill,
+.container-form textarea:-webkit-autofill:active,
+.container-form textarea:-webkit-autofill:focus,
+.container-form textarea:-webkit-autofill:hover {
+  -webkit-text-fill-color: var(--grayFormCL) !important;
+  -webkit-transition: background-color 5000s ease-in-out 0s;
+  transition: background-color 5000s ease-in-out 0s;
 }
 
 .spinner-holder {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    z-index: 999;
-    background-color: #fff;
-    height: 100vh;
-    left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  background: var(--backgroundColorFormCL);
+  height: 100vh;
+  left: 0;
 }
 
 .spinner-holder .spinner {
-    border-radius: 50%;
-    width: 32px;
-    height: 32px;
-    font-size: 10px;
-    position: relative;
-    top: calc(50% - 16px);
-    margin: 0 auto;
-    text-indent: -9999em;
-    border: 2px solid rgba(0, 0, 0, 0.1);
-    border-left: 2px solid var(--first);
-    transform: translateZ(0);
-    animation: spinner 0.6s infinite linear;
-}
-
-.form-container{
-    display: flex;
-    justify-content: center;
-    padding:3rem 0;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  font-size: 10px;
+  position: relative;
+  top: calc(50% - 16px);
+  margin: 0 auto;
+  text-indent: -9999em;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  border-left: 2px solid var(--primaryColorFormCL);
+  transform: translateZ(0);
+  animation: spinner 0.6s infinite linear;
 }
 
 .container-form {
-    box-sizing: border-box;
-    background: #fff;
-    border-radius: .4rem;
-    z-index: 2;
-    border-top: .2rem solid #2979ff;
-    border-top: .2rem solid var(--first);
-    box-shadow: 0 0 .5rem 0 rgba(0, 0, 0, .2);
-    width: 100%;
-    max-width: 34rem;
-    position: relative;
+  box-sizing: border-box;
+  background: var(--backgroundColorFormCL);
+  border-radius: 0.4rem;
+  z-index: 2;
+  border-top: 0.2rem solid var(--primaryColorFormCL);
+  box-shadow: 0 0 0.5rem 0 rgba(0, 0, 0, 0.2);
+  width: 100%;
+  position: relative;
 }
 
 .container-form form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-        padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 2rem;
 }
 
 .container-form form .red {
-    text-align: center;
-    color: #dd2c00;
-    color: var(--error);
-    margin-bottom: .8rem;
-    font-size: 1.2rem
+  text-align: center;
+  color: var(--errorColorFormCL);
+  margin-bottom: 0.8rem;
+  font-size: 1.2rem;
 }
 
 .container-form form .header-form {
-    padding: 1.6rem 1.6rem .8rem;
-    color: #9a9a9f;
-    color: var(--bubble-bg-message-text);
-    display: flex
+  padding: 1.6rem 1.6rem 0.8rem;
+  color: var(--fontColor);
+  display: flex;
 }
 
 .container-form form .header-form p {
-    margin: 0;
-    font-size: 1.4rem;
-    font-weight: 500
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 500;
 }
 
 .container-form form .header-form p.title-I7V {
-    margin-bottom: 5px;
-    font-weight: 700;
-    font-size: 14px
+  margin-bottom: 5px;
+  font-weight: 700;
+  font-size: 14px;
 }
 
 .container-form form .header-form .icon {
-    /* // background: url('../fonts/user-icon.7e1a5a6d.svg) 50% 50% no-repeat content-box; */
-    margin-right: 1.6rem;
-    width: 6rem
+  /* // background: url('../fonts/user-icon.7e1a5a6d.svg) 50% 50% no-repeat content-box; */
+  margin-right: 1.6rem;
+  width: 6rem;
 }
 
 .container-form form .header-form p.red {
-    font-size: 1.3rem
+  font-size: 1.3rem;
 }
 
 .container-form form .header-form .close-form {
-    position: absolute;
-    top: 0;
-    right: 0;
-    font-size: 14px
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 14px;
 }
 
 .container-form form .header-form .close-form button,
 .container-form form .header-form .close-form button:focus {
-    width: 32px;
-    height: 32px;
-    padding: 0 9px;
-    background: none;
-    border: none;
-    outline: 0
+  width: 32px;
+  height: 32px;
+  padding: 0 9px;
+  background: none;
+  border: none;
+  outline: 0;
 }
 
 .container-form form .bkg-gray {
-    margin: 0 -32px 16px;
-    padding: 0 32px 16px;
-    height: auto;
-    opacity: 1;
-    -webkit-transition: opacity .3s ease-in-out;
-    transition: opacity .3s ease-in-out
+  margin: 0 -32px 16px;
+  padding: 0 32px 16px;
+  height: auto;
+  opacity: 1;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
 }
 
 .container-form form .bkg-gray fieldset legend {
-    line-height: 1rem;
-    text-align: center
+  line-height: 1rem;
+  text-align: center;
 }
 
 .container-form form .bkg-gray fieldset textarea#por-que {
-    margin-top: 10px
+  margin-top: 10px;
 }
 
 .container-form form .bkg-gray.inactive {
-    height: 0;
-    opacity: 0;
-    padding: 0
+  height: 0;
+  opacity: 0;
+  padding: 0;
 }
 
 .container-form form fieldset {
-    padding: 0 1.6rem 1.4rem;
-    width: 100%
+  padding: 0 1.6rem 1.4rem;
+  width: 100%;
 }
 
 .container-form form fieldset input {
-    -webkit-transition: all .3s ease;
-    transition: all .3s ease
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .container-form form fieldset ul {
-    margin-top: 10px;
-    width: 100%;
-    padding: 10px;
-    background-color: #f8f8f8;
-    background-color: var(--white-gray);
-    border: 1px solid #e2e2e2;
-    border: 1px solid var(--border-color)
+  margin-top: 10px;
+  width: 100%;
+  padding: 10px;
+  background-color: var(--whiteGrayFormCL);
+  border: 1px solid var(--grayDarkFormCL);
 }
 
 .container-form form fieldset ul li {
-    list-style: none;
-    width: 100%;
-    justify-content: space-between;
-    display: flex;
-    align-items: center
+  list-style: none;
+  width: 100%;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
 }
 
 .container-form form fieldset ul li i {
-    cursor: pointer
+  cursor: pointer;
 }
 
 .container-form form fieldset.error input {
-    border: 1px solid #dd2c00;
-    border: 1px solid var(--error)
+  border: 1px solid var(--errorColorFormCL);
 }
 
 .container-form form fieldset.error legend {
-    color: #dd2c00;
-    color: var(--error)
+  color: var(--errorColorFormCL);
 }
 
 .container-form form fieldset small.error {
-    color: #dd2c00;
-    color: var(--error);
-    font-size: 1.2rem
+  color: var(--errorColorFormCL);
+  font-size: 1.2rem;
 }
 
 .container-form form fieldset legend {
-    color: #9a9a9f;
-    color: var(--bubble-bg-message-text);
-    font-weight: 700;
-    text-transform: capitalize;
-    font-size: 1.2rem;
-    -webkit-transition: all .3s ease;
-    transition: all .3s ease
+  color: var(--fontColorFormCL);
+  font-weight: 700;
+  text-transform: capitalize;
+  font-size: 1.2rem;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .container-form form fieldset .switch {
-    position: relative;
-    width: 100%;
-    height: 3.4rem;
-    margin-bottom: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #9a9a9f;
-    color: var(--bubble-bg-message-text)
+  position: relative;
+  width: 100%;
+  height: 3.4rem;
+  margin-bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--fontColor);
 }
 
 .container-form form fieldset .switch input {
-    display: none
+  display: none;
 }
 
 .container-form form fieldset .slider {
-    cursor: pointer;
-    width: 6.5rem;
-    height: 100%;
-    background-color: #ccc;
-    -webkit-transition: .4s;
-    transition: .4s;
-    margin: 0 1rem;
-    position: relative
+  cursor: pointer;
+  width: 6.5rem;
+  height: 100%;
+  background-color: var(--whiteLightFormCL);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  margin: 0 1rem;
+  position: relative;
 }
 
 .container-form form fieldset .slider:before {
-    position: absolute;
-    content: "";
-    height: 2.6rem;
-    width: 2.6rem;
-    left: .4rem;
-    bottom: .4rem;
-    background-color: #fff;
-    -webkit-transition: .4s;
-    transition: .4s
+  position: absolute;
+  content: "";
+  height: 2.6rem;
+  width: 2.6rem;
+  left: 0.4rem;
+  bottom: 0.4rem;
+  background: var(--backgroundColorFormCL);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 .container-form form fieldset .slider.round {
-    border-radius: 3.4rem
+  border-radius: 3.4rem;
 }
 
 .container-form form fieldset .slider.round:before {
-    border-radius: 50%
+  border-radius: 50%;
 }
 
-.container-form form fieldset input:checked+.slider {
-    background-color: #2979ff;
-    background-color: var(--first)
+.container-form form fieldset input:checked + .slider {
+  background-color: var(--primaryColorFormCL);
 }
 
-.container-form form fieldset input:focus+.slider {
-    box-shadow: 0 0 .1rem #2979ff;
-    box-shadow: 0 0 .1rem var(--first)
+.container-form form fieldset input:focus + .slider {
+  box-shadow: 0 0 0.1rem var(--primaryColorFormCL);
 }
 
-.container-form form fieldset input:checked+.slider:before {
-    -webkit-transform: translateX(3rem);
-    transform: translateX(3rem)
+.container-form form fieldset input:checked + .slider:before {
+  -webkit-transform: translateX(3rem);
+  transform: translateX(3rem);
 }
 
 .container-form form fieldset input,
 .container-form form fieldset select,
 .container-form form fieldset textarea {
-margin: 0;
-    padding: 1rem;
-    height: 3.6rem;
-    background: transparent;
-    border: 1px solid var(--border-color);
-    color: var(--gray);
-    resize: none;
-    font-weight: 300;
-    font-size: 1.2rem;
-    border-radius: .4rem;
+  margin: 0;
+  padding: 1rem;
+  height: 3.6rem;
+  background: transparent;
+  border: 1px solid var(--grayDarkFormCL);
+  color: var(--grayFormCL);
+  resize: none;
+  font-weight: 300;
+  font-size: 1.2rem;
+  border-radius: 0.4rem;
 }
 
 .container-form form fieldset input:-webkit-autofill,
@@ -413,372 +401,292 @@ margin: 0;
 .container-form form fieldset textarea:-webkit-autofill:active,
 .container-form form fieldset textarea:-webkit-autofill:focus,
 .container-form form fieldset textarea:-webkit-autofill:hover {
-    -webkit-text-fill-color: #666 !important;
-    -webkit-text-fill-color: var(--gray) !important;
-    -webkit-transition: background-color 5000s ease-in-out 0s;
-    transition: background-color 5000s ease-in-out 0s
+  -webkit-text-fill-color: (--grayFormCL) !important;
+  -webkit-text-fill-color: var(--gray) !important;
+  -webkit-transition: background-color 5000s ease-in-out 0s;
+  transition: background-color 5000s ease-in-out 0s;
 }
 
 .container-form form fieldset input::-webkit-input-placeholder,
 .container-form form fieldset select::-webkit-input-placeholder,
 .container-form form fieldset textarea::-webkit-input-placeholder {
-    color: #ccc;
-    font-weight: 300
+  color: var(--whiteLightFormCL);
+  font-weight: 300;
 }
 
 .container-form form fieldset input::-moz-placeholder,
 .container-form form fieldset select::-moz-placeholder,
 .container-form form fieldset textarea::-moz-placeholder {
-    color: #ccc;
-    font-weight: 300
+  color: var(--whiteLightFormCL);
+  font-weight: 300;
 }
 
 .container-form form fieldset input:-ms-input-placeholder,
 .container-form form fieldset select:-ms-input-placeholder,
 .container-form form fieldset textarea:-ms-input-placeholder {
-    color: #ccc;
-    font-weight: 300
+  color: var(--whiteLightFormCL);
+  font-weight: 300;
 }
 
 .container-form form fieldset input:-moz-placeholder,
 .container-form form fieldset select:-moz-placeholder,
 .container-form form fieldset textarea:-moz-placeholder {
-    color: #ccc;
-    font-weight: 300
+  color: var(--whiteLightFormCL);
+  font-weight: 300;
 }
 
 .container-form form fieldset input.error,
 .container-form form fieldset select.error,
 .container-form form fieldset textarea.error {
-    border-color: #dd2c00;
-    border-color: var(--error);
-    color: #dd2c00;
-    color: var(--error)
+  border-color: var(--errorColorFormCL);
+  color: var(--errorColorFormCL);
 }
 
 .container-form form fieldset select {
-    cursor: pointer;
-    display: none
+  cursor: pointer;
+  display: none;
 }
 
 .container-form form fieldset .select {
-    width: 100%;
-    position: relative
+  width: 100%;
+  position: relative;
 }
 
 .container-form form fieldset .select:before {
-    content: "";
-    position: absolute;
-    top: 1.1rem;
-    right: 1.5rem;
-    width: 0;
-    height: 0;
-    border-left: .8rem solid transparent;
-    border-right: .8rem solid transparent;
-    border-top: 1rem solid #999;
-    border-top: 1rem solid var(--gray-dark);
-    z-index: 11
+  content: "";
+  position: absolute;
+  top: 1.1rem;
+  right: 1.5rem;
+  width: 0;
+  height: 0;
+  border-left: 0.8rem solid transparent;
+  border-right: 0.8rem solid transparent;
+  border-top: 1rem solid var(--grayDarkFormCL);
+  z-index: 11;
 }
 
 .container-form form fieldset .select .options {
-    width: 100%;
-    margin: 0;
-    height: 3.1rem;
-    background: transparent;
-    color: #999;
-    color: var(--gray-dark);
-    font-weight: 300;
-    overflow: hidden;
-    display: flex;
-    flex-flow: column;
-    font-size: 1.4rem
+  width: 100%;
+  margin: 0;
+  height: 3.1rem;
+  background: transparent;
+  color: var(--grayDarkFormCL);
+  font-weight: 300;
+  overflow: hidden;
+  display: flex;
+  flex-flow: column;
+  font-size: 1.4rem;
 }
 
 .container-form form fieldset .select .options.active {
-    overflow: visible;
-    overflow: initial
+  overflow: visible;
+  overflow: initial;
 }
 
 .container-form form fieldset .select .options.active.error div:first-child,
 .container-form form fieldset .select .options.active div:first-child {
-    border-radius: .4rem .4rem 0 0
+  border-radius: 0.4rem 0.4rem 0 0;
 }
 
 .container-form form fieldset .select .options.error div:first-child {
-    border-radius: .4rem;
-    border: .1rem solid #dd2c00;
-    border-color: var(--error);
-    color: #dd2c00;
-    color: var(--error)
+  border-radius: 0.4rem;
+  border: 0.1rem solid var(--errorColorFormCL);
+  color: var(--errorColorFormCL);
 }
 
 .container-form form fieldset .select .options div {
-    cursor: pointer;
-    padding: .6rem 1.8rem;
-    z-index: 10;
-    background: #fff;
-    background: var(--bg-back);
-    position: relative;
-    border-right: .1rem solid #e2e2e2;
-    border-right: .1rem solid var(--border-color);
-    border-bottom: .1rem solid #e2e2e2;
-    border-bottom: .1rem solid var(--border-color);
-    border-left: .1rem solid #e2e2e2;
-    border-left: .1rem solid var(--border-color)
+  cursor: pointer;
+  padding: 0.6rem 1.8rem;
+  z-index: 10;
+  background: var(--backgroundColorFormCL);
+  position: relative;
+  border-right: 0.1rem solid var(--grayDarkFormCL);
+  border-bottom: 0.1rem solid var(--grayDarkFormCL);
+  border-left: 0.1rem solid var(--grayDarkFormCL);
 }
 
 .container-form form fieldset .select .options div:hover {
-    background: #f8f8f8;
-    background: var(--white-gray)
+  background: var(--whiteGrayFormCL);
 }
 
 .container-form form fieldset .select .options div:first-child {
-    border-radius: .4rem;
-    border: .1rem solid #e2e2e2;
-    border: .1rem solid var(--border-color)
+  border-radius: 0.4rem;
+  border: 0.1rem solid var(--grayDarkFormCL);
 }
 
 .container-form form fieldset .select .options div:last-child {
-    border-bottom: .1rem solid #e2e2e2;
-    border-bottom: .1rem solid var(--border-color);
-    margin-bottom: 2rem;
-    border-radius: 0 0 .4rem .4rem
+  border-bottom: 0.1rem solid var(--grayDarkFormCL);
+  margin-bottom: 2rem;
+  border-radius: 0 0 0.4rem 0.4rem;
 }
 
 .container-form form fieldset .select .options div.disabled {
-    background: #ddd;
-    background: var(--gray-light);
-    opacity: 1
+  background: var(--grayLightFormCL);
+  opacity: 1;
 }
 
 .container-form form fieldset textarea {
-    padding: .8rem;
-    min-height: 0;
-    height: auto;
-    background: #fff
+  padding: 0.8rem;
+  min-height: 0;
+  height: auto;
+  background: #fff;
 }
 
 .container-form form fieldset.radios-7l legend {
-    font-size: 1.2rem;
-    font-weight: 100;
-    margin: .8rem 0
-}
-
-.container-form form .rating-stars {
-    display: block;
-    position: relative
-}
-
-.container-form form .rating-stars legend {
-    font-weight: 100;
-    margin-bottom: 1rem
-}
-
-.container-form form .rating-stars:after,
-.container-form form .rating-stars:before {
-    content: "";
-    display: table;
-    clear: both
-}
-
-.container-form form .rating-stars a {
-    color: #9a9a9a;
-    display: inline-block;
-    font-size: 2rem;
-    font-weight: 400;
-    text-align: center;
-    padding-right: .8rem;
-    -webkit-transition: all .3s linear;
-    transition: all .3s linear
-}
-
-.container-form form .rating-stars a:hover~a {
-    color: #d3d4d3
-}
-
-.container-form form .rating-stars a.main_ActiveStar__2_roj {
-    color: #2979ff;
-    color: var(--first)
-}
-
-.container-form form .rating-stars .main_StarValue__17WaP {
-    border-top: 2px solid #2979ff;
-    border-top: 2px solid var(--first);
-    padding: .8rem 0 0;
-    margin-top: 1rem;
-    color: #2979ff;
-    color: var(--first);
-    font-size: 1.2rem
-}
-
-.container-form form .rating-stars .main_StarValue__17WaP p {
-    -webkit-animation: main_inAssistant__qMZak .6s linear;
-    animation: main_inAssistant__qMZak .6s linear
-}
-
-.container-form form .rating-stars .main_StarValue__17WaP p span {
-    font-size: 1.6rem
+  font-size: 1.2rem;
+  font-weight: 100;
+  margin: 0.8rem 0;
 }
 
 .container-form form .round {
-    margin-bottom: .8rem;
-    font-size: 1.4rem;
-    font-weight: 600;
-    color: #9a9a9f;
-    color: var(--bubble-bg-message-text);
-    display: flex;
-    align-items: center
+  margin-bottom: 0.8rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--fontColor);
+  display: flex;
+  align-items: center;
 }
 
 .container-form form .round .circle {
-    width: 1.4rem;
-    height: 1.4rem;
-    border-radius: 50%;
-    border: .2rem solid #2979ff;
-    border: .2rem solid var(--first);
-    -webkit-transition: all .3s ease;
-    transition: all .3s ease;
-    cursor: pointer;
-    margin-right: 1rem
+  width: 1.4rem;
+  height: 1.4rem;
+  border-radius: 50%;
+  border: 0.2rem solid var(--primaryColorFormCL);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  margin-right: 1rem;
 }
 
 .container-form form .round .circle:hover {
-    position: relative
+  position: relative;
 }
 
 .container-form form .round .circle:hover:before {
-    content: "";
-    width: .6rem;
-    height: .6rem;
-    background: #2979ff;
-    background: var(--first);
-    position: absolute;
-    left: .2rem;
-    top: .2rem;
-    border-radius: 50%
+  content: "";
+  width: 0.6rem;
+  height: 0.6rem;
+  background: var(--primaryColorFormCL);
+  position: absolute;
+  left: 0.2rem;
+  top: 0.2rem;
+  border-radius: 50%;
 }
 
 .container-form form .round .circle.active {
-    position: relative
+  position: relative;
 }
 
 .container-form form .round .circle.active:before {
-    content: "";
-    width: .6rem;
-    height: .6rem;
-    background: #2979ff;
-    background: var(--first);
-    position: absolute;
-    left: .2rem;
-    top: .2rem;
-    border-radius: 50%
+  content: "";
+  width: 0.6rem;
+  height: 0.6rem;
+  background: var(--primaryColorFormCL);
+  position: absolute;
+  left: 0.2rem;
+  top: 0.2rem;
+  border-radius: 50%;
 }
 
 .container-form form .round input {
-    visibility: hidden;
-    height: 0;
-    width: 0;
-    overflow: hidden;
-    padding: 0
+  visibility: hidden;
+  height: 0;
+  width: 0;
+  overflow: hidden;
+  padding: 0;
 }
 
-.container-form form .round input:checked+div {
-    background: #dd2c00;
-    background: var(--error)
+.container-form form .round input:checked + div {
+  background: var(--errorColorFormCL);
 }
 
 .container-form form button,
 .container-form form button:active,
 .container-form form button:focus,
-.container-form form input[type=submit],
-.container-form form input[type=submit]:active,
-.container-form form input[type=submit]:focus {
-    font-size: 1.4rem;
-    color: #2979ff;
-    color: var(--first);
-    height: 3.6rem;
-    border-radius: .4rem;
-    font-weight: 700;
-    border: 1px solid #2979ff;
-    border: 1px solid var(--first);
-    outline: 0;
-    -webkit-transition: all .3s ease;
-    transition: all .3s ease;
-    background: transparent;
-    padding: 0 20px;
-    margin: 0 auto
+.container-form form input[type="submit"],
+.container-form form input[type="submit"]:active,
+.container-form form input[type="submit"]:focus {
+  font-size: 1.4rem;
+  color: var(--primaryColorFormCL);
+  height: 3.6rem;
+  border-radius: 0.4rem;
+  font-weight: 700;
+  border: 1px solid var(--primaryColorFormCL);
+  outline: 0;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  background: transparent;
+  padding: 0 20px;
+  margin: 0 auto;
 }
 
 .container-form form button:active:hover,
 .container-form form button:focus:hover,
 .container-form form button:hover,
-.container-form form input[type=submit]:active:hover,
-.container-form form input[type=submit]:focus:hover,
-.container-form form input[type=submit]:hover {
-    background: #0052dc;
-    background: var(--gradient-medium);
-    color: #fff;
-    color: var(--bg-back)
+.container-form form input[type="submit"]:active:hover,
+.container-form form input[type="submit"]:focus:hover,
+.container-form form input[type="submit"]:hover {
+  background: var(--grayMediumFormCL);
+  color: var(--backgroundColorFormCL);
 }
 
 .container-form form button.button-send,
 .container-form form button:active.button-send,
 .container-form form button:focus.button-send,
-.container-form form input[type=submit].button-send,
-.container-form form input[type=submit]:active.button-send,
-.container-form form input[type=submit]:focus.button-send {
-    margin: 1.8rem 0
+.container-form form input[type="submit"].button-send,
+.container-form form input[type="submit"]:active.button-send,
+.container-form form input[type="submit"]:focus.button-send {
+  margin: 1.8rem 0;
 }
 
 .container-form form button:disabled {
-    opacity: .3
+  opacity: 0.3;
 }
 
 .container-form form button:disabled:hover {
-    background: transparent;
-    color: #2979ff;
-    color: var(--first)
+  background: transparent;
+  color: var(--primaryColorFormCL);
 }
 
 .container-form form .spinner-holder {
-    height: auto;
-    left: 0;
-    bottom: 0;
-    border-radius: 6px;
-    -moz-border-radius: 6px;
-    background: #fff
+  height: auto;
+  left: 0;
+  bottom: 0;
+  border-radius: 6px;
+  -moz-border-radius: 6px;
+  background: #fff;
 }
 
 .container-form form .spinner-holder.show {
-    display: block
+  display: block;
 }
 
 .container-form .error-msg {
-    position: absolute; 
-    top: -7rem;
-    width: 100%;
-    min-height: 7rem;
-    display: flex;
-    color: var(--bg-back);
-    background: var(--error);
-    font-weight: 300;
-    z-index: 20;
-    -webkit-transform: translateY(100%);
-    transform: translateY(100%);
-    transition: all .3s ease;
-    justify-content: center;
-    align-items: center;
+  position: absolute;
+  top: -7rem;
+  width: 100%;
+  min-height: 7rem;
+  display: flex;
+  color: var(--backgroundColorFormCL);
+  background: var(--errorColorFormCL);
+  font-weight: 300;
+  z-index: 20;
+  -webkit-transform: translateY(100%);
+  transform: translateY(100%);
+  transition: all 0.3s ease;
+  justify-content: center;
+  align-items: center;
 }
 
 .container-form .error-msg p {
-    margin-bottom: 5px
+  margin-bottom: 5px;
 }
 
 .container-form .error-msg p:last-child {
-    margin-bottom: 0
+  margin-bottom: 0;
 }
 
 .container-form .error-msg.show {
-    -webkit-transform: translateY(0);
-    transform: translateY(0)
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
 }

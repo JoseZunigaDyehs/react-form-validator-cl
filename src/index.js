@@ -85,20 +85,34 @@ const fields = [
     }
   }
 ];
+
+const colorFormCss = [
+  { fontColor: "#9a9a9f" },
+  { primaryColor: "#2979ff" },
+  { errorColor: "#dd2c00" },
+  { backgroundColor: "#fff" }
+];
+
 const sendFunc = dataForm => {
   console.log(dataForm);
   return true;
 };
 
+const style = {
+  maxHeight: "34rem"
+};
+
 ReactDOM.render(
-  <Form
-    primaryColor="red"
-    distinctFieldsMsg={"Campos obligatorios (*)"}
-    autoComplete={"off"}
-    fields={fields}
-    sendFunc={sendFunc}
-    errorMsg={"ERRORORRO"}
-    error={false}
-  />,
+  <div style={style}>
+    <Form
+      colors={colorFormCss}
+      distinctFieldsMsg={"Campos obligatorios (*)"}
+      autoComplete={"off"}
+      fields={fields}
+      sendFunc={sendFunc}
+      errorMsg={"ERRORORRO"}
+      error={false}
+    />
+  </div>,
   document.getElementById("root")
 );

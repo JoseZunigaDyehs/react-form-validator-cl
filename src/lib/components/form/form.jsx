@@ -32,7 +32,37 @@ export default class Form extends Component {
     });
   };
 
+  componentWillMount = () => {
+    this.setColors();
+  }
+
   //ACTIONS
+
+  setColors(){
+    const {colors} = this.props;
+    const applyColor = (color) =>{
+      if(color.fontColor){
+        document.documentElement.style.setProperty("--fontColorFormCL",color.fontColor);
+      } else if(color.primaryColor){
+        document.documentElement.style.setProperty("--primaryColorFormCL",color.primaryColor);
+      } else if(color.errorColor){
+        document.documentElement.style.setProperty("--errorColorFormCL",color.errorColor);
+      } else if(color.backgroundColor){
+        document.documentElement.style.setProperty("--backgroundColorFormCL",color.backgroundColor);
+      }
+    }
+    if(colors){
+      colors.forEach(color => {
+        applyColor(color);
+      });
+    }
+  }
+
+  blendColors = (c0, c1, p) => {
+    var f=parseInt(c0.slice(1),16),t=parseInt(c1.slice(1),16),R1=f>>16,G1=f>>8&0x00FF,B1=f&0x0000FF,R2=t>>16,G2=t>>8&0x00FF,B2=t&0x0000FF;
+    return "#"+(0x1000000+(Math.round((R2-R1)*p)+R1)*0x10000+(Math.round((G2-G1)*p)+G1)*0x100+(Math.round((B2-B1)*p)+B1)).toString(16).slice(1);
+  }
+
   sendFormStart = () => {
     this.state.setState({
       isFetching: true
@@ -280,10 +310,11 @@ export default class Form extends Component {
     }
   };
 
+  
+
   content = () => {
     const { fields, distinctFieldsMsg, autoComplete } = this.props;
     return (
-      <div className={"form-container "}>
         <div className="container-form">
           <form autoComplete={autoComplete}>
             <div className="header-form" />
@@ -302,12 +333,10 @@ export default class Form extends Component {
           </form>
           {this.fillErrorComponent()}
         </div>
-      </div>
     );
   };
 
   render = () => {
-    debugger
     return this.content();
   };
 }
